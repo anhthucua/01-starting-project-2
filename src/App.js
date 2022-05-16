@@ -8,16 +8,15 @@ function App() {
   const addUserHandler = (uName, uAge) => {
     
     setUsersList((prevUsersList) => {
-      console.log(uName, uAge);
       return [...prevUsersList, {name: uName, age: uAge}];
     });
   };
 
   return (
-    <div>
+    <React.Fragment>
       <AddUser onAddUser={addUserHandler}/>
       <UsersList users={usersList}/>
-    </div>
+    </React.Fragment>
   );
 }
 
